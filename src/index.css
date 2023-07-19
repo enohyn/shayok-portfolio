@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Monoton&family=Pacifico&family=Space+Grotesk:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", "Megrim", sans-serif, 'Space Grotesk', ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: linear-gradient(to top right, #18181b, #18181b,#18181b,#00303F);
+  background-attachment: fixed; */
+}
+
+::-webkit-scrollbar {
+  @apply w-5
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+  transition: all;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(to bottom, white, #9ca3af, #134e4a);
+
+}
+
+@layer base {
+  h1 {
+    @apply text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-5xl font-bold;
+  }
+
+  h3 {
+    @apply text-4xl font-bold;
+  }
+
+  p {
+    @apply text-lg
+  }
+
+
+}
+
+@layer components {
+  .foot-border {
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right top, #18181b45,
+        #18181b45,
+        #134e4a);
+
+
+  }
+
+  .right-arrow {
+    @apply top-0 relative;
+  }
+
+  .right-arrow::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 100;
+    left: -.6rem;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(128, 128, 128, 0.321) transparent transparent;
+  }
+
+  .timeline {
+    @apply relative border-l-[8px] rounded-md;
+    border-image: linear-gradient(to bottom,
+        #9ca3af,
+        #115e59) 1
+  }
+
+
+  .brand-logo-text {
+    font-family: 'Megrim', cursive;
+    @apply text-4xl font-extrabold;
+  }
+
+  .hero-font {
+    font-family: 'Space Grotesk', cursive;
+    @apply text-4xl;
+  }
+
+  a.active,
+  a.focus {
+    @apply relative bg-teal-600/20 z-10 backdrop-filter backdrop-blur-xl shadow-lg text-teal-600
+  }
+
+  a:hover {
+    @apply text-teal-600 transition
+  }
+
+  .outer-box {
+    position: relative;
+  }
+
+  .outer-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    padding: 5px;
+    background: linear-gradient(58deg, #18181b05, #18181b, #134e4a);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: ease-in-out 3s;
+    animation: fadeInOut 4s infinite 2s;
+  }
+
+  .portfolio-box {
+    position: relative;
+  }
+
+  .portfolio-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    padding: 5px;
+    background: linear-gradient(330deg, #18181b45, #18181b45, #134e4aa7);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: ease-in-out 1s;
+    animation: fadeInOut 4s infinite 2s;
+  }
+
+  .inner-box {
+    position: relative;
+  }
+
+  .inner-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    padding: 5px;
+    background: linear-gradient(232deg, transparent, #18181b00, #134e4a);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: ease-in-out 3s;
+    animation: fadeInOut 4s infinite 3s;
+
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .border-t-l {
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(2deg, #0000001b, #18181b29, #134e4ae9) 20;
+  }
+
+  .change-name {
+    cursor: pointer;
+  }
+
+
+  .backdrops {
+    @apply relative bg-white/5 z-10 backdrop-filter backdrop-blur-sm shadow-lg
+  }
+
+  .btn-hover-text {
+    @apply [&>*]: hover:text-background hover:bg-primary
+  }
+
+  .image-zoom {
+    @apply scale-100 [&>*]: hover:scale-125 [&>*]:delay-150 [&>*]:duration-300 [&>*]:ease-in-out [&>*]:transform [&>*]:transition-transform
+  }
+
+  .animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(20px);
+    }
+
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  }
+
+}

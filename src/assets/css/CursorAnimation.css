@@ -1,0 +1,146 @@
+
+
+* {
+    cursor: none;
+    user-select: none;
+}
+
+
+
+
+.main-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.top-layer {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.bottom-layer {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-secondary-background);
+    --mask: radial-gradient(circle at var(--x, 50.3%) var(--y, 50.3%),
+            black var(--maskSize1, 0%),
+            transparent 0,
+            transparent 0);
+    mask-image: var(--mask);
+    -webkit-mask-image: var(--mask);
+}
+
+.header-container {
+    position: absolute;
+}
+
+#cursor {
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #00303F;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: luminosity;
+}
+
+.header-container :nth-child(1) {
+    display: flex;
+    color: var(--main-light-purple);
+    margin: 0;
+    font-size: var(--fs-small);
+}
+
+.header-container :nth-child(2) {
+    display: flex;
+    margin: 20px 0;
+    font-size: var(--fs-big);
+    color: var(--main-header);
+}
+
+.header-container :nth-child(3) {
+    display: flex;
+    color: var(--main-light-purple);
+    margin: 0;
+    justify-content: end;
+    font-size: var(--fs-small);
+}
+
+.header-container-secondary :nth-child(1) {
+    display: flex;
+    color: var(--main-white);
+    margin: 0;
+    font-size: var(--fs-small);
+}
+
+.header-container-secondary :nth-child(2) {
+    display: flex;
+    margin: 20px 0;
+    font-size: var(--fs-big);
+    color: var(--main-dark);
+}
+
+.header-container-secondary :nth-child(3) {
+    display: flex;
+    color: var(--main-white);
+    margin: 0;
+    justify-content: end;
+    font-size: var(--fs-small);
+}
+
+footer {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0%;
+    color: var(--main-sub);
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--main-sub);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 100em) {
+    :root {
+        --fs-big: 7em;
+        --fs-small: 5em;
+    }
+}
+
+@media (max-width: 40em) {
+    :root {
+        --fs-big: 5em;
+        --fs-small: 3em;
+    }
+}
+
+@media (max-width: 30em) {
+    :root {
+        --fs-big: 4em;
+        --fs-small: 2em;
+    }
+}
