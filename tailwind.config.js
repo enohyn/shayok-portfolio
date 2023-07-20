@@ -55,6 +55,7 @@ module.exports = {
       indigo: colors.indigo,
       teal: colors.teal,
       green:colors.green,
+      zinc:colors.zinc
     },
     
     container: {
