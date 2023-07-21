@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "../pages/Home/HomePage";
+import Login from "../pages/Login/Login";
 
 const RoutesConfig = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                {/* <Route path="/about" element={<About />} /> */}
+                <Route path="/sign-in" element={<Login/>} />
                 {/* <Route path="/portfolio" element={<ProjectExperience />} /> */}
                 {/* <Route path="/crowdsource/*" element={<CsRoutes />} /> */}
                 {/* <Route path="/braille/*" element={<BtbcRoutes />} /> */}
