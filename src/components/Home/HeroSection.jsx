@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Images from '../../assets/images'
 
 const HeroSection = () => {
+    
 
-    useEffect(() => {
-      
-    }, [])
     
 //bg-fixed bg-gradient-to-tr from-zinc-900 via-zinc-900 to-teal-900
     return (
