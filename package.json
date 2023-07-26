@@ -1,7 +1,7 @@
 {
   "name": "portfolio-shayok",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://enohyn.github.io/shayok-portfolio",
   "dependencies": {
     "@heroicons/react": "^2.0.17",
