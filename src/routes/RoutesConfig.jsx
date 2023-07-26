@@ -5,7 +5,7 @@ import Login from "../pages/Login/Login";
 
 const RoutesConfig = () => {
     return (
-        <BrowserRouter basename="/shayok-portfolio">
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/sign-in" element={<Login/>} />
