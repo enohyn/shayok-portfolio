@@ -5,7 +5,7 @@ import Login from "../pages/Login/Login";
 
 const RoutesConfig = () => {
     return (
-        <BrowserRouter basename={window.location.pathname || ''}>
+        <BrowserRouter basename="/shayok-portfolio">
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/sign-in" element={<Login/>} />

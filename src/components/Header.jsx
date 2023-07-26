@@ -22,7 +22,7 @@ function Header() {
               </li>
             ))}
           </ul>
-          <a className='inline-flex w-1/3 justify-center  items-center' href='/'>
+          <a className='inline-flex w-1/3 justify-center  items-center' href='/shayok-portfolio'>
             <h4 className='brand-logo-text text-white hover:text-teal-600 transition'>Shayok</h4>
           </a>
           <div className='flex gap-x-4 w-1/3 justify-end '>

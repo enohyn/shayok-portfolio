@@ -14,7 +14,7 @@
 body {
   margin: 0;
   font-size: 16px;
-  font-family: "Plus Jakarta Sans", "Megrim", sans-serif, 'Space Grotesk', ;
+  font-family: "Plus Jakarta Sans", sans-serif, 'Space Grotesk', "Megrim" ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-image: linear-gradient(to top right, #18181b, #18181b,#18181b,#00303F);
@@ -56,7 +56,7 @@ div::-webkit-scrollbar-thumb:hover {
   }
 
   p {
-    @apply text-lg
+    @apply text-lg font-space
   }
 
 
