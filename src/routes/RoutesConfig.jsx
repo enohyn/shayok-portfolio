@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import HomePage from "../pages/Home/HomePage";
 import Login from "../pages/Login/Login";
 
 const RoutesConfig = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/sign-in" element={<Login/>} />
@@ -19,7 +19,7 @@ const RoutesConfig = () => {
                 {/* <Route path="/not-found/*" element={<NotFoundRoutes />} /> */}
                 {/* <Route path="/*" element={<Navigate to="not-found" />} /> */}
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
