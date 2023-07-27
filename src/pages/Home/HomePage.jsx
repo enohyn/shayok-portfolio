@@ -7,7 +7,7 @@ import HeroSection from '../../components/Home/HeroSection'
 import ProjectExperience from '../../components/Home/ProjectExperience'
 function HomePage() {
   return (
-    <div className='flex flex-col gap-y-12' >
+    <div >
         <Header/>
         <HeroSection/>
         <About/>
