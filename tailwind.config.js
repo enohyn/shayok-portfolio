@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     fontFamily:{
       space:['Space Grotesk', 'Sans Serif'],
-
+      megrim:['Megrim', 'Sans Serif']
     },
     backdropBlur: {
       'none': 'none',
