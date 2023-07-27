@@ -21,42 +21,12 @@ import "../assets/css/TextShpere.css";
 
 const TextShpere = () => {
     // Animation settings for Text Cloud
-    // useEffect(() => {
-    //     return () => {
-    //         const container = ".tagcloud";
-    //         const texts = [
-    //             "HTML5",
-    //             "CSS3",
-    //             "SASS",
-    //             "JavaScript",
-    //             "React",
-    //             "Tailwind",
-    //             "Storybook",
-    //             "NodeJS",
-    //             "Wordpress",
-    //             "jQuery",
-    //             "ES6",
-    //             "GIT",
-    //             "Bootstrap",        
-    //         ];
-
-    //         const options = {
-    //             radius: 200,
-    //             maxSpeed: "slow",
-    //             initSpeed: "fast",
-    //             keep: true,
-    //         };
-
-    //         TagCloud(container, texts, options);
-    //     };
-    // }, []);
-
     useEffect(() => {
+        return () => {
+            const container = ".tagcloud";
+            let radii;
 
-        const container = '.tagcloud';
-        let radii;
-      
-         const texts = [
+            const texts = [
                 "HTML5",
                 "CSS3",
                 "SASS",
@@ -72,25 +42,66 @@ const TextShpere = () => {
                 "Bootstrap",        
             ];
 
-        function radiusValue() {
-            if (window.screen.width <= 778) {
-                radii = 150;
-            } else {
-                radii = 290;
+            function radiusValue() {
+                if (window.screen.width <= 778) {
+                    radii = 150;
+                } else {
+                    radii = 200;
+                }
+                return radii;
             }
-            return radii;
-        }
+    
+            const options = {
+                radius: radiusValue(),
+                maxSpeed: 'normal',
+                initSpeed: 'slow',
+                keep: true,
+            };
 
-        const options = {
-            radius: radiusValue(),
-            maxSpeed: 'normal',
-            initSpeed: 'normal',
-            keep: true,
+            TagCloud(container, texts, options);
         };
-
-        TagCloud(container, texts, options);
     }, []);
 
+    //deployment code 
+    // useEffect(() => {
+
+    //     const container = '.tagcloud';
+    //     let radii;
+      
+    //      const texts = [
+    //             "HTML5",
+    //             "CSS3",
+    //             "SASS",
+    //             "JavaScript",
+    //             "React",
+    //             "Tailwind",
+    //             "Storybook",
+    //             "NodeJS",
+    //             "Wordpress",
+    //             "jQuery",
+    //             "ES6",
+    //             "GIT",
+    //             "Bootstrap",        
+    //         ];
+
+    //     function radiusValue() {
+    //         if (window.screen.width <= 778) {
+    //             radii = 150;
+    //         } else {
+    //             radii = 290;
+    //         }
+    //         return radii;
+    //     }
+
+    //     const options = {
+    //         radius: radiusValue(),
+    //         maxSpeed: 'normal',
+    //         initSpeed: 'normal',
+    //         keep: true,
+    //     };
+
+    //     TagCloud(container, texts, options);
+    // }, []);
 
     return (
         <>
