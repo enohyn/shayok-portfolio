@@ -46,7 +46,7 @@ function Header() {
           <span className='w-1/3 flex justify-start'>
             <GiHamburgerMenu className='text-white' onClick={menuClick} />
           </span>
-          <ul className={clickState ? `list-none capitalize w-2/3 h-[calc(100vh_-_5vh)] absolute top-20 left-0 py-10 flex flex-col justify-start transition-all backdrops` : 'hidden left-20'}>
+          <ul className={`transition ${clickState ? `list-none capitalize w-2/3 h-screen absolute top-[68px] left-0 py-10 flex flex-col justify-start  backdrops` : 'hidden left-20'}`}>
             {MENU_PATHS.map((item, index) => (
               <li key={index} className={`${ListClass} py-5 w-full flex flex-col items-center`}>
                 <a href={item.path} className={`font-space focus:backdrops rounded-sm text-white w-full text-center py-3`}
