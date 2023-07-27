@@ -76,7 +76,7 @@ const TextShpere = () => {
             if (window.screen.width <= 778) {
                 radii = 150;
             } else {
-                radii = 290;
+                radii = 200;
             }
             return radii;
         }
