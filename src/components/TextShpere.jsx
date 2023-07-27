@@ -42,13 +42,6 @@ const TextShpere = () => {
                 "Bootstrap",        
             ];
 
-<<<<<<< HEAD
-        function radiusValue() {
-            if (window.screen.width <= 778) {
-                radii = 150;
-            } else {
-                radii = 200;
-=======
             function radiusValue() {
                 if (window.screen.width <= 778) {
                     radii = 150;
@@ -56,7 +49,6 @@ const TextShpere = () => {
                     radii = 200;
                 }
                 return radii;
->>>>>>> 036dffdaa09371e7f8439446f9d3d2a6c57bc50f
             }
     
             const options = {
