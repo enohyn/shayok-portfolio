@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { AiOutlineLinkedin } from "react-icons/ai";
+import { FaAngleDoubleLeft } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { VscGithub } from 'react-icons/vsc';
-
 
 import { NavLink } from 'react-router-dom';
 import Images from '../assets/images';
@@ -46,9 +46,12 @@ function Header() {
           {/* Mobile Menu */}
         <div className='lg:hidden flex justify-around items-center '>
           <span className='w-1/3 flex justify-start'>
-            <GiHamburgerMenu className='text-white' onClick={menuClick} />
+            <GiHamburgerMenu className='text-white hover:text-teal-600 w-6 h-6' onClick={menuClick} />
           </span>
-          <ul className={` transition-all list-none capitalize w-2/3 h-screen absolute top-[8vh] py-10 flex flex-col justify-start mobile-backdrops ${clickState ? `left-0` : '-left-full'}`}>
+          <ul className={` transition-all list-none capitalize w-full sm:w-2/3 h-screen absolute top-[8vh] py-2 flex flex-col justify-start mobile-backdrops ${clickState ? `left-0` : '-left-full'}`}>
+            <span className='w-full inline-flex justify-end items-start p-2 relative top-0' >
+              <FaAngleDoubleLeft className='text-white w-6 h-6 hover:text-teal-600'onClick={menuClick} />
+            </span>
             {MENU_PATHS.map((item, index) => (
               <li key={index} className={`${ListClass} py-5 w-full flex flex-col items-center`}>
                 <a href={item.path} className={`font-space focus:backdrops rounded-sm text-white w-full text-center py-3`}
