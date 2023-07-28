@@ -44,11 +44,11 @@ function Header() {
         </div>
           
           {/* Mobile Menu */}
-        <div className='lg:hidden flex justify-around items-center'>
+        <div className='lg:hidden flex justify-around items-center '>
           <span className='w-1/3 flex justify-start'>
             <GiHamburgerMenu className='text-white' onClick={menuClick} />
           </span>
-          <ul className={`transition ${clickState ? `list-none capitalize w-2/3 h-screen absolute top-[65px] left-0 py-10 flex flex-col justify-start  mobile-backdrops` : 'hidden left-20'}`}>
+          <ul className={` transition-all list-none capitalize w-2/3 h-screen absolute top-[65px] py-10 flex flex-col justify-start mobile-backdrops ${clickState ? `left-0` : '-left-full'}`}>
             {MENU_PATHS.map((item, index) => (
               <li key={index} className={`${ListClass} py-5 w-full flex flex-col items-center`}>
                 <a href={item.path} className={`font-space focus:backdrops rounded-sm text-white w-full text-center py-3`}
