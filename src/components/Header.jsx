@@ -48,7 +48,7 @@ function Header() {
           <span className='w-1/3 flex justify-start'>
             <GiHamburgerMenu className='text-white' onClick={menuClick} />
           </span>
-          <ul className={` transition-all list-none capitalize w-2/3 h-screen absolute top-[65px] py-10 flex flex-col justify-start mobile-backdrops ${clickState ? `left-0` : '-left-full'}`}>
+          <ul className={` transition-all list-none capitalize w-2/3 h-screen absolute top-[8vh] py-10 flex flex-col justify-start mobile-backdrops ${clickState ? `left-0` : '-left-full'}`}>
             {MENU_PATHS.map((item, index) => (
               <li key={index} className={`${ListClass} py-5 w-full flex flex-col items-center`}>
                 <a href={item.path} className={`font-space focus:backdrops rounded-sm text-white w-full text-center py-3`}
@@ -69,7 +69,9 @@ function Header() {
             </li>
           </ul>
           <a className='inline-flex w-1/3 justify-center items-center' href='/shayok-portfolio'>
-            <h4 className='lg:brand-logo-text font-megrim text-xl text-white hover:text-teal-600 transition'>Shayok</h4>
+            <h4 className=' text-4xl font-megrim text-white hover:text-teal-600 transition inline-flex items-center'>
+              <img src={Images.brandLogo} className='h-8' alt="shayok" />
+              Shayok</h4>
           </a>
           <div className='flex gap-x-4 w-1/3 justify-end '>
           </div>

@@ -58,10 +58,7 @@ div::-webkit-scrollbar-thumb:hover {
   p {
     @apply text-lg font-space xl:text-xl;
   }
-  img{
-   color: red;
   
-  }
 }
 
 @layer components {
