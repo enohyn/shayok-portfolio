@@ -43,19 +43,20 @@ const TextShpere = () => {
             ];
 
             function radiusValue() {
-                if (window.screen.width <= 778) {
-                    radii = 150;
+                if (window.screen.width <= 640) {
+                    radii = 170;
                 } else {
-                    radii = 200;
+                    radii = 240;
                 }
                 return radii;
             }
     
             const options = {
                 radius: radiusValue(),
-                maxSpeed: 'fast',
-            initSpeed: 'slow',
+                maxSpeed: 'normal',
+                initSpeed: 'normal',
                 keep: true,
+                
             };
 
             TagCloud(container, texts, options);
@@ -85,13 +86,14 @@ const TextShpere = () => {
     //         ];
 
     //     function radiusValue() {
-    //         if (window.screen.width <= 778) {
-    //             radii = 150;
+    //         if (window.screen.width <= 640) {
+    //             radii = 170;
     //         } else {
-    //             radii = 290;
+    //             radii = 260;
     //         }
     //         return radii;
     //     }
+
 
     //     const options = {
     //         radius: radiusValue(),
@@ -105,12 +107,12 @@ const TextShpere = () => {
 
     return (
         <>
-            <div className="text-shpere flex flex-col justify-center items-center">
+            <div className="text-shpere flex flex-col justify-between items-center lg:h-1/2">
                 <h3 className="text-white font-space">
                     Framework and Technologies
                 </h3>
                 {/* span tag className must be "tagcloud"  */}
-                <span className="tagcloud"></span>
+                <span className="tagcloud text-xs sm:text-sm md:text-base lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold"></span>
             </div>
         </>
     );

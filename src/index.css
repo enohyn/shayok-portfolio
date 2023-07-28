@@ -44,22 +44,24 @@ div::-webkit-scrollbar-thumb:hover {
 
 @layer base {
   h1 {
-    @apply text-6xl font-bold;
+    @apply text-6xl font-bold max-sm:text-4xl;
   }
 
   h2 {
-    @apply text-5xl font-bold;
+    @apply text-5xl font-bold max-sm:text-4xl;
   }
 
   h3 {
-    @apply text-4xl font-bold;
+    @apply text-4xl font-bold max-sm:text-3xl;
   }
 
   p {
-    @apply text-lg font-space
+    @apply text-lg font-space xl:text-xl;
   }
-
-
+  img{
+   color: red;
+  
+  }
 }
 
 @layer components {
@@ -99,8 +101,7 @@ div::-webkit-scrollbar-thumb:hover {
 
 
   .brand-logo-text {
-    font-family: 'Megrim', cursive;
-    @apply text-4xl font-extrabold;
+    @apply text-4xl font-extrabold font-megrim;
   }
 
   .hero-font {
@@ -201,7 +202,9 @@ div::-webkit-scrollbar-thumb:hover {
   .change-name {
     cursor: pointer;
   }
-
+  .mobile-backdrops{
+     @apply relative bg-gradient-to-tr from-zinc-900 via-zinc-900 to-teal-900 z-10 backdrop-filter backdrop-blur-sm shadow-lg
+  }
 
   .backdrops {
     @apply relative bg-white/5 z-10 backdrop-filter backdrop-blur-sm shadow-lg

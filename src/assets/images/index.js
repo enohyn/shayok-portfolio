@@ -1,5 +1,5 @@
 const Images = {
-    // brandLogo: require('./genweb-logo.svg').default,
+    brandLogo: require('./logo.svg').default,
    
 
     shayokImage: require("./enohyn.png"),

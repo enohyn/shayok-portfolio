@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { AiOutlineLinkedin } from "react-icons/ai";
-import { VscGithub } from 'react-icons/vsc';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { VscGithub } from 'react-icons/vsc';
 
 
 import { NavLink } from 'react-router-dom';
+import Images from '../assets/images';
 import { MENU_PATHS } from '../constants/MENU_PATHS';
 
 function Header() {
@@ -29,7 +30,8 @@ function Header() {
             ))}
           </ul>
           <a className='inline-flex w-1/3 justify-center  items-center' href='/shayok-portfolio'>
-            <h4 className='brand-logo-text text-white hover:text-teal-600 transition'>Shayok</h4>
+            <h4 className='brand-logo-text text-white hover:text-teal-600 transition inline-flex'>
+             <img src={Images.brandLogo} className='w-10' alt="logo" /> Shayok</h4>
           </a>
           <div className='flex gap-x-4 w-1/3 justify-end '>
             <NavLink to={`https://github.com/enohyn`} target='_blank'>
@@ -46,7 +48,7 @@ function Header() {
           <span className='w-1/3 flex justify-start'>
             <GiHamburgerMenu className='text-white' onClick={menuClick} />
           </span>
-          <ul className={`transition ${clickState ? `list-none capitalize w-2/3 h-screen absolute top-[68px] left-0 py-10 flex flex-col justify-start  backdrops` : 'hidden left-20'}`}>
+          <ul className={`transition ${clickState ? `list-none capitalize w-2/3 h-screen absolute top-[65px] left-0 py-10 flex flex-col justify-start  mobile-backdrops` : 'hidden left-20'}`}>
             {MENU_PATHS.map((item, index) => (
               <li key={index} className={`${ListClass} py-5 w-full flex flex-col items-center`}>
                 <a href={item.path} className={`font-space focus:backdrops rounded-sm text-white w-full text-center py-3`}

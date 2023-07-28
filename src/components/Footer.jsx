@@ -8,16 +8,16 @@ function Footer() {
       <nav className='py-4 w-full container mx-auto'>
         <div className='flex justify-between items-center'>
           <a href='#meet-shayok' className='list-none capitalize flex items-center justify-start w-1/3'>
-              <span className='brand-logo-text text-white hover:text-teal-600 transition text-3xl'>&copy; Shayok</span>
+              <span className='font-megrim text-lg lg:text-3xl font-extrabold text-white hover:text-teal-600 transition'>&copy; Shayok</span>
           </a>
           
-          <div className='flex gap-x-4 w-1/3 justify-end '>
-            <span className='font-space text-2xl font-semibold text-white'>Look me up:</span>
+          <div className='flex gap-x-4 w-2/3 lg:w-1/3 justify-end max-lg:items-center '>
+            <span className='font-space text-base lg:text-2xl font-semibold text-white'>Look me up:</span>
             <NavLink to={`https://github.com/enohyn`} target='_blank'>
-              <VscGithub className='w-8 h-8 text-white hover:text-teal-600 transition' />
+              <VscGithub className='lg:w-8 lg:h-8 text-white hover:text-teal-600 transition' />
             </NavLink>
             <NavLink to={`https://www.linkedin.com/in/shayok-here/`} target='_blank'>
-              <AiOutlineLinkedin className='w-8 h-8 text-white hover:text-teal-600 transition' />
+              <AiOutlineLinkedin className='lg:w-8 lg:h-8 text-white hover:text-teal-600 transition' />
             </NavLink>
           </div>
 

@@ -3,7 +3,7 @@ import { FiCode } from 'react-icons/fi'
 const ProjectExperience = () => {
     return (
         <section id='portfolio' className='flex h-full xl:h-[100vh]'>
-            <div className="container mx-auto ">
+            <div className="w-full md:container md:mx-auto ">
                 <div className=" inline-flex flex-col w-full h-full gap-y-12 py-20">
                     <h2 className='font-space text-white text-center'>Project Experience</h2>
                         <div className=' overflow-y-scroll'>

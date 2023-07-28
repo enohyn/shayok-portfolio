@@ -4,14 +4,14 @@ import TextShpere from '../TextShpere'
 const About = () => {
     return (
         <section id='about' className='flex h-full xl:h-[calc(100vh-5vh)] items-center'>
-            <div className="container mx-auto">
+            <div className="w-full lg:container lg:mx-auto">
                 <div className="w-full gap-y-10 flex flex-col portfolio-box backdrops rounded-xl py-20">
                     <h2 className='font-space text-white text-center'>Get To Know Me</h2>
-                    <div className='gap-6 flex flex-col-reverse md:flex-row'>
-                        <div className="w-full lg:w-6/12 flex flex-col gap-y-4 justify-center px-10">
+                    <div className='gap-6 flex flex-col-reverse xl:flex-row'>
+                        <div className="w-full xl:w-6/12 flex flex-col gap-y-4 justify-center px-10">
                             <TextShpere />
                         </div>
-                        <div className="w-full lg:w-6/12 flex flex-col gap-y-4 text-white px-10 justify-start ">
+                        <div className="w-full xl:w-6/12 flex flex-col gap-y-4 text-white px-5 md:px-10 justify-start ">
                             <h3 className='font-space'>
                                 A Unique Perspective on Life and Work
                             </h3>
