@@ -43,8 +43,8 @@ const TextShpere = () => {
             ];
 
             function radiusValue() {
-                if (window.screen.width <= 640) {
-                    radii = 170;
+                if (window.screen.width <= 425) {
+                    radii = 150;
                 } else {
                     radii = 240;
                 }
@@ -107,10 +107,7 @@ const TextShpere = () => {
 
     return (
         <>
-            <div className="text-shpere flex flex-col justify-between items-center lg:h-1/2">
-                <h3 className="text-white font-space">
-                    Framework and Technologies
-                </h3>
+            <div className="text-shpere">
                 {/* span tag className must be "tagcloud"  */}
                 <span className="tagcloud text-xs sm:text-sm md:text-base lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold"></span>
             </div>

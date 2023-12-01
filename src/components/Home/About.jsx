@@ -8,7 +8,12 @@ const About = () => {
                 <div className="w-full gap-y-10 flex flex-col portfolio-box backdrops rounded-xl py-20">
                     <h2 className='font-space text-white text-center'>Get To Know Me</h2>
                     <div className='gap-6 flex flex-col-reverse xl:flex-row'>
-                        <div className="w-full xl:w-6/12 flex flex-col gap-y-4 justify-center px-10">
+                        <div className="w-full xl:w-6/12 flex flex-col gap-y-4 justify-center px-5">
+                            {/* <div className="w-full justify-start flex"> */}
+                                <h3 className="text-white font-space">
+                                    Framework and Technologies
+                                </h3>
+                            {/* </div> */}
                             <TextShpere />
                         </div>
                         <div className="w-full xl:w-6/12 flex flex-col gap-y-4 text-white px-5 md:px-10 justify-start ">
